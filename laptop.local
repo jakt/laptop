@@ -1,0 +1,34 @@
+!/bin/sh
+
+# jakt
+brew bundle --file=- <<EOF
+# jakt core apps
+brew cask install "google-chrome"
+brew cask install "sketch"
+brew cask install "zeplin"
+brew cask install "slack"
+brew cask install "skype"
+brew cask install "1password"
+brew cask install "dropbox"
+brew cask install "appcleaner"
+brew cask install "skitch"
+# productivity apps
+brew cask install "alfred"
+brew cask install "bartender"
+brew cask install "bettertouchtool"
+brew cask install "insync"
+brew cask install "textexpander"
+brew cask install "flux"
+brew cask install "evernote"
+brew cask install "spotify"
+brew cask install "spark"
+brew cask install "fantastical"
+# dev apps
+brew cask install "cyberduck"
+brew cask install "atom"
+brew cask install "sourcetree"
+EOF
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
